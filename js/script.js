@@ -13,6 +13,8 @@ for (let i = 0; i < nomes.length; i++) {
     console.log(`Aluno: ${nomes[i]}, Posição: ${i}`)
 }
 console.log(nomes)
+
+
 let posicao = 0
 for (const nomes of alunos) {
     console.log(`Aluno: ${nomes}, Posição: ${posicao}`)
