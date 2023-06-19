@@ -82,24 +82,75 @@ console.log('Notas maiores que 7:', notasMaioresQueSete1)
 
 //14 utilize o loop for  tradicional para percorrer os dois array nome e notas e mostre o nome e nota de cada  aluno.
 
-nomes = ["João", "Maria", "Carlos"]
-notas = [8.5, 9.0, 7.5]
+nomes6 = ["João", "Maria", "Carlos"]
+notas6 = [8.5, 9.0, 7.5]
 
-for (i = 0; i < nomes.length; i++) {
-    nomeAluno = nomes[i]
-    notaAluno = notas[i].toFixed(1)
+for (i = 0; i < nomes6.length; i++) {
+    nomeAluno = nomes6[i]
+    notaAluno = notas6[i].toFixed(1)
     console.log("Aluno: " + nomeAluno + " - Nota: " + notaAluno)
 }
 
 
-//15 utilie o metodo forerach para percorrer o array de notas e mostrar se cada aluno está aprovado (nota >=7.0) ou reprovado.
+//15 utilie o metodo forerach para percorrer o array de notas e mostrar se cada aluno está aprovado (nota >= 7.0) ou reprovado.
 
-nomes = ["João", "Maria", "Carlos"]
-notas = [8.5, 9.0, 6.5]
+nomes1 = ["João", "Maria", "Carlos"]
+notas2 = [8.5, 9.0, 6.5]
 
-nomes.forEach(function(nome, index) {
-    nota = notas[index]
+nomes1.forEach(function(nome, index) {
+    nota = notas2[index]
     situacao = nota >= 7.0 ? "Aprovado" : "Reprovado"
     
     console.log(nome + " - Nota: " + nota.toFixed(1) + " - " + situacao)
 })
+
+//16 utilize um metodo index of() para retorna o índice do  elemento "lucas" no array de nomes.
+
+const nomes = ['ana', 'lucas', 'maria', 'lucas', 'pedro']
+
+const indice = nomes.indexOf('lucas')
+
+console.log(indice); // Saída: 1
+
+//17 utilize o método findindex() para localizaar no array notas o índice  da 1º nota acima de 9.0.
+
+const notas3 = [7.5, 8.0, 9.5, 9.0, 9.8, 8.5]
+
+const indice1 = notas3.findIndex(nota => nota > 9.0)
+
+console.log(indice); // Saída: 2
+
+//18 utilize o metodo includes para verificar se o aluno "lucas" esta na lista.
+
+const alunos2 = ['ana', 'maria', 'lucas', 'pedro']
+
+const estaNaLista = alunos2.includes('lucas')
+
+console.log(estaNaLista); // Saída: true
+
+//19 utilize o metodo reduce () para caulcular a media das notas
+
+const notas4 = [7.5, 8.0, 9.5, 9.0, 9.8, 8.5]
+
+const soma = notas4.reduce((acumulador, nota) => acumulador + nota, 0)
+const media3 = soma / notas4.length
+
+console.log(media3); // Saída: 8.583333333333334
+
+//20 utilize os métodos every () para verificar se todas as notas são maiores ao iguais á média.
+
+const notas5 = [7.5, 8.0, 9.5, 9.0, 9.8, 8.5]
+const media2 = 8.583333333333334;
+
+const todasMaioresOuIguais = notas5.every(nota => nota >= media2)
+
+console.log(todasMaioresOuIguais); // Saída: false
+
+//21 utilize o metodo soma() para veficar se ha notas superiores a média.
+
+const notas = [7.5, 8.0, 9.5, 9.0, 9.8, 8.5];
+const media = 8.583333333333334;
+
+const haNotasSuperiores = notas.some(nota => nota > media);
+
+console.log(haNotasSuperiores); // Saída: true
