@@ -44,21 +44,29 @@ alunos.splice(2, 0, 'Ricardo')
 alunos.splice(6, 0, 'Camila')
 alunos.splice(7, 0, 'Guilherme')
 
+console.log(alunos)
+console.log(alunos.length)
+
 // 4. Ordene o array de modo descescente.
 alunos.sort().reverse()
+console.log(alunos)
 
 // 5. Remova o último aluno.
 alunos.pop()
+console.log(alunos)
 
 // 6. Remova o primeiro aluno.
 alunos.shift()
+console.log(alunos)
 
 // 7. Remova o aluno da posição 5.
-alunos.splice(4, 1)
+alunos.splice(5, 1)
+console.log(alunos)
 
 // 8. Ordene o array em modo crescente.
 alunos.sort()
-
+console.log(alunos)
+console.log(alunos.length)
 // 9. Utilize o Loop...OF para percorrer o array e exibir os nomes e a posição dos alunos.
 let posicao1 = 0
 for (const aluno of alunos) {
@@ -67,15 +75,15 @@ for (const aluno of alunos) {
 }
 // 10. Inicialize um array vazio.
 let notas1 = []
-
+console.log(alunos)
 // 11. Utilize o Loop FOR tradicional para adicionar as notas dos alunos neste novo array.
 for (let i = 0; i < alunos.length; i++) {
-  notas1.push(Math.floor(Math.random() * 10) + 1)
+    notas1.push((Math.random() * 10).toFixed(1))
 }
-
+console.log(notas1)
 // 12. Utilize o método map para adicionar 1.0 ponto à nota de cada aluno.
 notas1 = notas1.map(nota => nota + 1.0)
-
+console.log(notas1)
 // 13. Utilize o método filter para exibir apenas as notas maiores do que 7.
 let notasMaioresQueSete1 = notas1.filter(nota => nota > 7)
 console.log('Notas maiores que 7:', notasMaioresQueSete1)
