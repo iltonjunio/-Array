@@ -76,22 +76,25 @@ for (const aluno of alunos) {
 // 10. Inicialize um array vazio.
 let notas1 = []
 console.log(alunos)
+
 // 11. Utilize o Loop FOR tradicional para adicionar as notas dos alunos neste novo array.
 for (let i = 0; i < alunos.length; i++) {
     notas1.push((Math.random() * 10).toFixed(1))
 }
 console.log(notas1)
+
 // 12. Utilize o método map para adicionar 1.0 ponto à nota de cada aluno.
 notas1 = notas1.map(nota => nota + 1.0)
 console.log(notas1)
+
 // 13. Utilize o método filter para exibir apenas as notas maiores do que 7.
 let notasMaioresQueSete1 = notas1.filter(nota => nota > 7)
 console.log('Notas maiores que 7:', notasMaioresQueSete1)
 
 //14 utilize o loop for  tradicional para percorrer os dois array nome e notas e mostre o nome e nota de cada  aluno.
 
-nomes6 = ["João", "Maria", "Carlos"]
-notas6 = [8.5, 9.0, 7.5]
+let nomes6 = ["João", "Maria", "Carlos"]
+let notas6 = [8.5, 9.0, 7.5]
 
 for (i = 0; i < nomes6.length; i++) {
     nomeAluno = nomes6[i]
